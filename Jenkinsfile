@@ -17,5 +17,15 @@ pipeline{
                 git branch: 'main', url: 'https://github.com/samjax/dmistry-complete-jenkins-prod-e2e-pipeline.git'
             }
         }
+        stage("Build application"){   
+            steps{
+                sh 'mvn clean package'
+            }
+        }
+        stage("Test application"){   
+            steps{
+                sh 'mvn test'
+            }
+        }
     }
 }
