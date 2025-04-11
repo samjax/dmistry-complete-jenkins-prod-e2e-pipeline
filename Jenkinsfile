@@ -11,7 +11,7 @@ pipeline{
         RELEASE = "1.0.0"
         DOCKER_USER="sampathdockerid"
         DOCKER_PASSWORD="dockerhub-secret"
-        IMAGE_NAME="${DOCKER_USER}" + "/" + "${$APP_NAME}"
+        IMAGE_NAME="${DOCKER_USER}" + "/" + "${APP_NAME}"
         IMAGE_TAG = "${RELEASE}-${BUILD_NUMBER}"
     }
     stages{
