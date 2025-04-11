@@ -10,7 +10,7 @@ pipeline{
         APP_NAME = "dmistry-complete-jenkins-prod-e2e-pipeline"
         RELEASE = "1.0.0"
         DOCKER_USER="sampathdockerid"
-        DOCKER_PASSWORD="dockerhub-secret" 
+        DOCKER_PASSWORD=credentials("dockerhub-secret")
         IMAGE_NAME="${DOCKER_USER}" + "/" + "{$APP_NAME}"
         IMAGE_TAG = "${RELEASE}-${BUILD_NUMBER}"
     }
